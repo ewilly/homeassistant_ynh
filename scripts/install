@@ -59,9 +59,8 @@ exec_as $app -H -s /bin/bash -c " \
 		&& source "$final_path/bin/activate" \
 	&& echo 'install a required python package' \
 		&& pip install --upgrade wheel \
-		&& pip install --upgrade zipp==1.1.0 \
 	&& echo 'install Home Assistant' \
-		&& pip install --upgrade $app==0.96.5 \
+		&& pip install --upgrade --python-version 35 $app==0.96.5 \
 	"
 
 # set default configuration files
