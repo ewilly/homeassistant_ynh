@@ -53,7 +53,7 @@ myynh_install_homeassistant () {
 
 		# install Home Assistant
 		# force bleak <1.0.0 = temp hack to fix install issue https://forum.yunohost.org/t/home-assistant-failing-to-install/37560
-		ynh_exec_as_app "$uv" --quiet pip --no-cache-dir install --upgrade "bleak>=0.21.1,<1.0.0" "$app==$app_version" webrtcvad wheel mysqlclient psycopg2-binary isal
+		ynh_exec_as_app "$uv" --quiet pip --no-cache-dir install "$app==$app_version" webrtcvad wheel mysqlclient psycopg2-binary isal
 	)
 }
 
